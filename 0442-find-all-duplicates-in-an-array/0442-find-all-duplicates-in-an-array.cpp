@@ -4,19 +4,18 @@ public:
         vector<int> ans;
         int n=nums.size();
         
-        unordered_map<int,int> ump;
-        
-        for(auto ele:nums)
+        for(int i=0;i<n;i++)
         {
-            ump[ele]++;
-        }
-        
-        for(auto it:ump)
-        {
-            if(it.second>1)
+            int eleIndex = abs(nums[i])-1;
+            
+            //edit the element
+            nums[eleIndex]=-nums[eleIndex];
+            
+            if(nums[eleIndex]>0)
             {
-                ans.push_back(it.first);
+                ans.push_back(eleIndex+1);
             }
+            
         }
         return ans;
     }
