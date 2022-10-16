@@ -14,14 +14,18 @@ class Solution{
         // Complete the function
         
         
-        int i=0;
-        int j=n-1;
-        
-        while(i<j)
+        int newArr[n];
+        int j=0;
+        for(int i=n-1;i>=0;i--)
         {
-            if(arr[i]!=arr[j]) return false;
-            i++,j--;
+            newArr[j++]=arr[i];
         }
+        
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]!=newArr[i])return false;
+        }
+        
         return true;
         
         
