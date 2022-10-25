@@ -4,15 +4,21 @@ public:
         string str1="";
         string str2="";
         
-        for(auto word:word1)
+        int n=word1.size(),m=word2.size();
+        
+        for(int i=0; i<(max(n,m)); i++)
         {
-            str1+=word;
-        }
-        for(auto word:word2)
-        {
-            str2+=word;
+            if(i<n)
+            {
+                str1+=word1[i];
+            }
+            if(i<m)
+            {
+                str2+=word2[i];
+            }
         }
         
+      
         return str1==str2;
     }
 };
