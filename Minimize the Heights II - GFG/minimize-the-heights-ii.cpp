@@ -13,7 +13,7 @@ class Solution {
         // code here
         sort(arr,arr+n);
         int ans = arr[n-1]-arr[0];
-        int mini,maxi;
+        int mini=0,maxi=0;
         
         int low = arr[0]+k;
         int high = arr[n-1]-k;
