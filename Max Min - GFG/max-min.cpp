@@ -20,15 +20,8 @@ class Solution
     	
     	for(int i=0;i<N;i++)
     	{
-    	    if(arr[i]>maxi)
-    	    {
-    	        maxi=arr[i];
-    	    }
-    	    
-    	    if(arr[i]<mini)
-    	    {
-    	        mini=arr[i];
-    	    }
+    	    maxi = max(maxi,arr[i]);
+    	    mini = min(mini,arr[i]);
     	}
     	
     	ans = maxi+mini;
