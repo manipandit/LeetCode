@@ -2,13 +2,10 @@ class Solution {
 public:
     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
         
-        int n=candies.size();
+        
         vector<bool> res;
-        int initMax=INT_MIN;
-        for(int i=0;i<n;i++)
-        {
-           initMax = max(initMax,candies[i]);
-        }
+        int initMax=*max_element(candies.begin(),candies.end());
+        
         
         for(auto candy:candies)
         {
