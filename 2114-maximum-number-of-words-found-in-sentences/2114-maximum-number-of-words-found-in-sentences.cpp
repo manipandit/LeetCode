@@ -5,7 +5,7 @@ public:
         for(auto str:sentences)
         {
             
-            int wordCnt = (int)count(str.begin(),str.end(),' ') + 1 ; //no leading or trailing spaces
+            int wordCnt = count(str.begin(),str.end(),' ') + 1 ; //no leading or trailing spaces
             
             maxCount = max(maxCount ,wordCnt);
         }
