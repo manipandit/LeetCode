@@ -4,11 +4,8 @@ public:
         int maxCount = 0;
         for(auto str:sentences)
         {
-            int wordCnt=1;
-            for(int i=0;i<str.size();i++)
-            {
-                if(str[i]==' ')wordCnt++;
-            }
+            
+            int wordCnt = (int)count(str.begin(),str.end(),' ') + 1 ; //no leading or trailing spaces
             
             maxCount = max(maxCount ,wordCnt);
         }
