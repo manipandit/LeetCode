@@ -9,27 +9,36 @@ public:
 	int rowWithMax1s(vector<vector<int> > arr, int n, int m) {
 	    // code here
 	    
-	    int max1Row = -1;
-	    int maxCountOf1 = 0;
+	    int result = -1;
+	    int leftMostOne = -1;
 	    
+	    int j=m-1;
 	    
-	    for(int i=0;i<n;i++)
+	    while(j>=0 && arr[0][j]==1)
 	    {
-	        int countOf1 = 0;
-	        for(int j=0;j<m;j++)
-	        {
-	            if(arr[i][j]==1)
-	            {
-	                countOf1++;
-	                if(countOf1 > maxCountOf1)
-	                {
-	                    maxCountOf1 = countOf1;
-	                    max1Row = i;
-	                }
-	            }
-	        }
+	        leftMostOne = j;
+	        result=0;
+	        
+	        j--;
 	    }
-	    return max1Row;
+	    
+	    for(int i=1;i<n;i++)
+	    {
+    	     while(j>=0 && arr[i][j]==1)
+    	    {
+    	        leftMostOne = j;
+    	        result=i;
+    	        
+    	        j--;
+    	    }    
+	    }
+	    
+	    return result;
+	    
+	    
+	    
+	    
+	    
 	}
 
 };
