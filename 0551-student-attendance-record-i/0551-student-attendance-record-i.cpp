@@ -4,11 +4,11 @@ public:
         
         int neverLate = 0;
         int absent = 0;
-        char prev,present;
+        char prev;
         
         for(auto ch:s)
         {
-            present=ch;
+            
             if(ch=='A')
             {
                 absent++;
@@ -20,10 +20,10 @@ public:
             
             else if(ch=='L')
             {
-                if(present == prev)
+                if(ch == prev)
                 {
                     neverLate ++;
-                    if(neverLate + 1 >=3)
+                    if(neverLate + 1 > 2)
                     {
                         return false;
                     }
