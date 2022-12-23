@@ -12,7 +12,6 @@ class Solution{
             if(op!="")
             {
                 ans.push_back(op);
-                return;
             }
             return;
         }
